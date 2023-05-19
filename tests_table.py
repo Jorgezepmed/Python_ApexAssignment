@@ -1,7 +1,8 @@
-# Import necessary modules
 import unittest
 import psycopg2
 from psycopg2 import sql
+
+# Import the function to be tested
 from create_table import create_table
 
 # Define a test case class for testing the create_table function
@@ -14,12 +15,10 @@ class TestCreateTable(unittest.TestCase):
 
     # Clean up the test environment after each test
     def tearDown(self):
-        # Close the database connection
         self.conn.close()
 
     # Define a test case for testing the table creation function
     def test_table_creation(self):
-        # Call the create_table function
         create_table(self.conn)
 
         # Open a cursor to perform database operations
@@ -65,6 +64,6 @@ class TestCreateTable(unittest.TestCase):
         # Assert that the table is empty
         self.assertEqual(rows, [])
 
-# Run the tests if this module is the main module
+
 if __name__ == "__main__":
     unittest.main()

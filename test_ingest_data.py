@@ -1,4 +1,3 @@
-# Import necessary modules
 import unittest
 import os
 import psycopg2
@@ -22,7 +21,6 @@ class TestIngestVideoData(unittest.TestCase):
 
     # Clean up the test environment after each test
     def tearDown(self):
-        # Close the database connection
         self.conn.close()
 
     # Define a test case for testing the data ingestion function
@@ -60,6 +58,5 @@ class TestIngestVideoData(unittest.TestCase):
         self.assertTrue(all(column in df.columns for column in expected_columns), "CSV file does not have expected columns")
 
 
-# Run the tests if this module is the main module
 if __name__ == "__main__":
     unittest.main()

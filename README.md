@@ -3,7 +3,13 @@
 
 # Apex Coding Assignment
 
-This repository contains the code for the Apex Coding Assignment, which involves cutting a video into 1-minute clips, creating a PostgreSQL table, and ingesting video data into the table.
+This repository contains the code for the Apex Coding Assignment. This project is designed to cut a video into 1-minute clips and perform data analysis on them..
+
+
+## Author
+Author: Jorge Zepeda
+
+
 
 ## Environment Setup
 
@@ -43,6 +49,9 @@ This repository contains the code for the Apex Coding Assignment, which involves
    ```
 
    This will insert the video data into the `video_data` table and generate a CSV report in the `report` folder.
+
+## Unit Testing
+The code includes unit tests to ensure the proper functionality of the different features. These tests can be found in the files `test_create_table.py`, `test_ingest_video_data.py` .
 
 ## Additional Notes
 
